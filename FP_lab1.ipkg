@@ -1,6 +1,12 @@
 package FP_lab1
 version = 0.1.0
 authors = "Azat222"
+sourcedir = "src"
+main = Prob1
+executable = main
+
+
+
 -- maintainers =
 -- license =
 -- brief =
@@ -16,7 +22,7 @@ authors = "Azat222"
 -- depends =
 
 -- modules to install
-modules = FP_lab1
+modules = Prob1
 
 -- main file (i.e. file to load at REPL)
 -- main =

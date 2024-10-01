@@ -6,7 +6,7 @@ sum_of_5_pows: Int -> Int
 sum_of_5_pows = go 0 where
   go: Int -> Int -> Int 
   go sum 0 = sum
-  go sum i = go (sum + cast (pow (cast (i `mod` 10)) 5)) (i `div` 10) 
+  go sum i = go (sum + cast (pow (cast $ i `mod` 10) 5)) (i `div` 10) 
 
 
 export
@@ -33,7 +33,7 @@ prob2_rec = go 2 where
 
 export
 prob2_filter : Int
-prob2_filter = sumlist (filterlist (generatelist)) where
+prob2_filter = sumlist $ filterlist $ generatelist where
   generatelist : List Int
   generatelist = 
     let limit = 7*9*9*9*9*9*9 in
@@ -48,7 +48,7 @@ prob2_filter = sumlist (filterlist (generatelist)) where
 
 export
 prob2_map : Int
-prob2_map = sumlist (maplist (generatelist)) where
+prob2_map = sumlist $ maplist $ generatelist where
   generatelist : List Int
   generatelist = 
     let limit = 7*9*9*9*9*9*9 in
@@ -62,7 +62,7 @@ prob2_map = sumlist (maplist (generatelist)) where
 
 export
 prob2_lazy : Int
-prob2_lazy = sumlist (filterlist (generatelist)) where
+prob2_lazy = sumlist $ filterlist $ generatelist where
   generatelist : LazyList Int 
   generatelist = 
     let limit = 7*9*9*9*9*9*9 in

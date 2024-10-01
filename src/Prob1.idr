@@ -36,7 +36,7 @@ prob1_tail_rec i = go 0 i where
 
 export
 prob1_filter : Int -> Int
-prob1_filter i = sumlist (filterlist (generatelist i)) where
+prob1_filter i = sumlist $ filterlist $ generatelist i where
   generatelist : Int -> List Int
   generatelist i = [0,1..i]
 
@@ -48,7 +48,7 @@ prob1_filter i = sumlist (filterlist (generatelist i)) where
 
 export
 prob1_map : Int -> Int
-prob1_map i = sumlist (maplist (generatelist i)) where
+prob1_map i = sumlist $ maplist $ generatelist i where
   generatelist : Int -> List Int
   generatelist i = [0,1..i]
 
@@ -61,7 +61,7 @@ prob1_map i = sumlist (maplist (generatelist i)) where
 
 export
 prob1_lazy : Int -> Int
-prob1_lazy i = sumlist (maplist (generatelist i)) where
+prob1_lazy i = sumlist $ maplist $ generatelist i where
   generatelist : Int -> LazyList Int
   generatelist i = fromList [0..i]
 

@@ -11,10 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     container: ghcr.io/stefan-hoeck/idris2-pack:latest
     steps:
-      - uses: actions/checkout@v4
-
+      - name: Checkout
+        uses: actions/checkout@v4
       - name: Typecheck
         run: pack typecheck FP_lab1
-      
       - name: Run tests
         run: pack test FP_lab1

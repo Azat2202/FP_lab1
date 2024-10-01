@@ -22,7 +22,7 @@ executable = main
 -- depends =
 
 -- modules to install
-modules = Prob1
+modules = Prob1, Prob2
 
 -- main file (i.e. file to load at REPL)
 -- main =

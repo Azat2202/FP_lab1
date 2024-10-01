@@ -14,6 +14,7 @@ prob1 k = 3 * sum_of_k (k `div` 3)
 prob1_cond : Int -> Bool
 prob1_cond i = (i `mod` 3 == 0) || (i `mod` 5 == 0)
 
+export
 prob1_rec : Int -> Int
 prob1_rec 0 = 0
 prob1_rec i = 
@@ -22,6 +23,8 @@ prob1_rec i =
   else 
       prob1_rec (i - 1)
 
+
+export
 prob1_tail_rec : Int -> Int
 prob1_tail_rec i = go 0 i where
   go: Int -> Int -> Int
@@ -31,6 +34,7 @@ prob1_tail_rec i = go 0 i where
                 else go sum (i - 1)
 
 
+export
 prob1_filter : Int -> Int
 prob1_filter i = sumlist (filterlist (generatelist i)) where
   generatelist : Int -> List Int
@@ -42,6 +46,7 @@ prob1_filter i = sumlist (filterlist (generatelist i)) where
   sumlist : List Int -> Int
   sumlist xs = foldr (+) 0 xs
 
+export
 prob1_map : Int -> Int
 prob1_map i = sumlist (maplist (generatelist i)) where
   generatelist : Int -> List Int
@@ -54,6 +59,7 @@ prob1_map i = sumlist (maplist (generatelist i)) where
   sumlist xs = foldr (+) 0 xs
 
 
+export
 prob1_lazy : Int -> Int
 prob1_lazy i = sumlist (maplist (generatelist i)) where
   generatelist : Int -> LazyList Int

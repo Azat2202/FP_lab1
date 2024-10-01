@@ -3,13 +3,14 @@ version = 0.1.0
 authors = "Azat222"
 
 -- packages to add to search path
--- depends = Prob1
+depends = FP_lab1
+          , hedgehog
 
 -- main file (i.e. file to load at REPL)
 main = Main
 
 -- name of executable
-executable = "FPlab1-test"
+executable = "Main"
 -- opts =
 sourcedir = "src"
 -- builddir =
